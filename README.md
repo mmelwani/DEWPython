@@ -6,7 +6,7 @@
 
 V 2.0.0
 
-The DEW package allows the user to compute the thermodynamic and elastic properties of various aqueous inputs for a general range of 100-1200C and a pressure range of 1.0-60 Kb. It is based on the [DEW spreadsheet](http://www.dewcommunity.org/) and behaves similarly.The DEW package additionally provides integrated support for [SUPCRTBL](https://models.earth.indiana.edu/supcrtbl.php) and can be used to directly import and compare species between the two models.
+The DEW package allows the user to compute the thermodynamic and elastic properties of various aqueous inputs for a general range of 100 - 1200 C and a pressure range of 1 - 60 Kbar. It is based on the [DEW spreadsheet](http://www.dewcommunity.org/) and behaves similarly. The DEW package additionally provides integrated support for [SUPCRTBL](https://models.earth.indiana.edu/supcrtbl.php) and can be used to directly import and compare species between the two models.
 
 V 2.0.1
 
@@ -135,22 +135,24 @@ Certain equations within DEW are valid to certain values (as are the properties 
 * Huang, F., & Sverjensky, D. A. (2019). Extended Deep Earth Water Model for predicting major element mantle metasomatism. Geochimica et Cosmochimica Acta, 254, 192-230.
 * Facq, S., Daniel, I., Montagnac, G., Cardon, H., & Sverjensky, D. A. (2016). Carbon speciation in saline solutions in equilibrium with aragonite at high pressure. Chemical Geology, 431, 44-53.
 * Facq, S., Daniel, I., Montagnac, G., Cardon, H., & Sverjensky, D. A. (2014). In situ Raman study and thermodynamic model of aqueous carbonate speciation in equilibrium with aragonite under subduction zone conditions. Geochimica et Cosmochimica Acta, 132, 375-390.
-* Johnson, J.W., Oelkers, E.H. and Helgeson, H.C. (1992) SUPCRT92 - A software package for calculating the standard molal thermodynamic properties of minerals, gases, aqueous species, and reactions from 1-bar to 5000-bar and 0C to 1000C. Computer and Geosciences 18:899-947.
-* Sverjensky, D. A., Harrison, B., & Azzolini, D. (2014). Water in the deep Earth: The dielectric constant and the solubilities of quartz and corundum to 60kb and 1200 C. Geochimica et Cosmochimica Acta, 129, 125-145.
+* Johnson, J.W., Oelkers, E.H. and Helgeson, H.C. (1992) SUPCRT92 - A software package for calculating the standard molal thermodynamic properties of minerals, gases, aqueous species, and reactions from 1 bar to 5000 bar and 0 C to 1000 C. Computers and Geosciences 18:899-947.
+* Sverjensky, D. A., Harrison, B., & Azzolini, D. (2014). Water in the deep Earth: The dielectric constant and the solubilities of quartz and corundum to 60 kbar and 1200 C. Geochimica et Cosmochimica Acta, 129, 125-145.
 * Pan, D., Spanu, L., Harrison, B., Sverjensky, D. A., & Galli, G. (2013). Dielectric properties of water under extreme conditions and transport of carbonates in the deep Earth. Proceedings of the National Academy of Sciences, 110(17), 6646-6650.
 * Zimmer, K., Zhang, Y.L., Lu, P., Chen, Y.Y., Zhang, G.R., Dalkilic, M. and Zhu, C. (2016) SUPCRTBL: A revised and extended thermodynamic dataset and software package of SUPCRT92. Computer and Geosciences 90:97-111. 
 
 ## Authors
 
 * **Andrew Chan** - *Div. of Geological and Planetary Sciences, California Institute of Technology, Pasadena, CA, USA 91125* 
-* **Mohit Melwani Daswani** - *Group 3226 (Planetary Interiors and Geophysics). NASA Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
-* **Steven Vance** - *Group 3226 (Planetary Interiors and Geophysics). NASA Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
+* **Mohit Melwani Daswani** - *Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
+* **Steven Vance** - *Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
+* **Seda Işık** - **
+* **Emre Işık** - **
 
 ## Change log
 
 ### Changes since 1.2.0
 - Updated stored species to include slop16
-- Integrated SUPCRTBL/supcrt16
+- Integrated SUPCRTBL/supcrt96
 - Updated functionality (plots, automatic feeding, search function)
 
 ### Planned updates
@@ -159,7 +161,7 @@ Certain equations within DEW are valid to certain values (as are the properties 
 
 This project is licensed under the MIT License :
 
-Copyright (c) 2021, A. Chan
+© 2024. Jet Propulsion Laboratory, California Institute of Technology. Government sponsorship acknowledged.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files, to deal
@@ -181,4 +183,4 @@ SOFTWARE.
 
 ## Acknowledgments
 
-This work was produced with the financial support provided by the NASA Jet Propulsion Laboratory, the California Institute of Technology Summer Undergraduate Research Fellowship program, and the Caltech Assocaites.
+M.M.D. was supported by the NASA Planetary Science Early Career Award Program NNH19ZDA001N-ECA to proposal #19-ECA19-0032. A part of this research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration (80NM0018D0004). Financial support provided by the Jet Propulsion Laboratory, California Institute of Technology Summer Undergraduate Research Fellowship program, and the Caltech Associates.
