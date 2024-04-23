@@ -1,11 +1,11 @@
 # DEWPython
 
-[![License: GPL v3 License](https://img.shields.io/badge/License-GPL--3.0-blue.svg?style=flat-square)](https://opensource.org/license/gpl-3-0)
+[![License: GPL v3 License](https://img.shields.io/badge/License-GPL--3.0-blue.svg?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 [![DOI](https://zenodo.org/badge/290678733.svg)](https://zenodo.org/badge/latestdoi/290678733)
 
 V 2.0.0
 
-The DEW package allows the user to compute the thermodynamic and elastic properties of various aqueous inputs for a general range of 100 - 1200 C and a pressure range of 1 - 60 Kbar. It is based on the [DEW spreadsheet](http://www.dewcommunity.org/) and behaves similarly. The DEW package additionally provides integrated support for [SUPCRTBL](https://models.earth.indiana.edu/supcrtbl.php) and can be used to directly import and compare species between the two models.
+The DEW package allows the user to compute the thermodynamic and elastic properties of various aqueous inputs for a general range of 100 - 1200 C and a pressure range of 1 - 60 kbar. It is based on the [DEW spreadsheet](http://www.dewcommunity.org/) and behaves similarly. The DEW package additionally provides integrated support for [SUPCRTBL](https://models.earth.indiana.edu/supcrtbl.php) and can be used to directly import and compare species between the two models.
 
 V 2.0.1
 
@@ -174,4 +174,4 @@ Copyright (C) 2024. Jet Propulsion Laboratory, California Institute of Technolog
 
 ## Acknowledgments
 
-M.M.D. was supported by the NASA Planetary Science Early Career Award Program NNH19ZDA001N-ECA to proposal #19-ECA19-0032. A part of this research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration (80NM0018D0004). Financial support for AC was provided by the Jet Propulsion Laboratory, California Institute of Technology Summer Undergraduate Research Fellowship program, and the Caltech Associates.
+M.M.D. was supported by the NASA Planetary Science Early Career Award Program NNH19ZDA001N-ECA to proposal #19-ECA19-0032. A part of this research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration (80NM0018D0004). Financial support for A.C. was provided by the Jet Propulsion Laboratory, California Institute of Technology Summer Undergraduate Research Fellowship program, and the Caltech Associates.
