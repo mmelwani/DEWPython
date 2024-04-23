@@ -1,7 +1,6 @@
 # DEWPython
 
-[![License: MIT License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![Twitter Follow](https://img.shields.io/twitter/follow/chandr3w.svg?style=flat-square&logo=twitter&label=Follow)](https://twitter.com/chandr3w)
+[![License: GPL v3 License](https://img.shields.io/badge/License-GPL--3.0-blue.svg?style=flat-square)](https://opensource.org/license/gpl-3-0)
 [![DOI](https://zenodo.org/badge/290678733.svg)](https://zenodo.org/badge/latestdoi/290678733)
 
 V 2.0.0
@@ -158,29 +157,21 @@ Certain equations within DEW are valid to certain values (as are the properties 
 ### Planned updates
 
 ## License
+Copyright (C) 2024. Jet Propulsion Laboratory, California Institute of Technology. Government sponsorship acknowledged.
 
-This project is licensed under the MIT License :
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-© 2024. Jet Propulsion Laboratory, California Institute of Technology. Government sponsorship acknowledged.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files, to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## Acknowledgments
 
-M.M.D. was supported by the NASA Planetary Science Early Career Award Program NNH19ZDA001N-ECA to proposal #19-ECA19-0032. A part of this research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration (80NM0018D0004). Financial support provided by the Jet Propulsion Laboratory, California Institute of Technology Summer Undergraduate Research Fellowship program, and the Caltech Associates.
+M.M.D. was supported by the NASA Planetary Science Early Career Award Program NNH19ZDA001N-ECA to proposal #19-ECA19-0032. A part of this research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration (80NM0018D0004). Financial support for AC was provided by the Jet Propulsion Laboratory, California Institute of Technology Summer Undergraduate Research Fellowship program, and the Caltech Associates.
