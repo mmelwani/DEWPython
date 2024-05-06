@@ -1,0 +1,9 @@
+
+This folder contains instructive notebooks that can be used to run DEWPython
+in various ways, as well as to process data from the DEW and/or SUPCRT models.
+
+In the following we describe each notebook.
+
+Example-supcrt96-calc.ipynb -- Call SUPCRT from DEWPython (or do it separately in
+terminal), save its output in csv format.
+
