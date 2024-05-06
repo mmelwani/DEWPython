@@ -144,7 +144,7 @@ Certain equations within DEW are valid to certain values (as are the properties 
 * **Andrew Chan** - *Div. of Geological and Planetary Sciences, California Institute of Technology, Pasadena, CA, USA 91125* 
 * **Mohit Melwani Daswani** - *Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
 * **Steven Vance** - *Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
-* **Seda Işık** - *Istanbul Technical University, Istanbul, Türkiye*
+* **Seda Işık** - *Eurasia Institute of Earth Sciences, Istanbul Technical University, 34469 Istanbul, Türkiye*
 * **Emre Işık** - *Max Planck Institute for Solar System Research, 37077 Göttingen, Germany*
 
 ## Change log
