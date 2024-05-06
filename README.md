@@ -9,7 +9,7 @@ The DEW package allows the user to compute the thermodynamic and elastic propert
 
 V 2.0.1
 
-Automatic input function updated (2022/10/30). Now you can use it in the form as shown in `examples/auto-input-example.ipynb`. Beware: this is a beta release. You can use it only by cloning this repository into your local disk, then importing DEWPython according to the location of the cloned repository. 
+Automatic input function updated (2022/10/30). Now you can use it in the form as shown in `tools/Example-dew-calc.ipynb`. Beware: this is a beta release. You can use it only by cloning this repository into your local disk, then importing DEWPython according to the location of the cloned repository. 
 
 ## Getting Started
 
@@ -144,8 +144,8 @@ Certain equations within DEW are valid to certain values (as are the properties 
 * **Andrew Chan** - *Div. of Geological and Planetary Sciences, California Institute of Technology, Pasadena, CA, USA 91125* 
 * **Mohit Melwani Daswani** - *Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
 * **Steven Vance** - *Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
-* **Seda Işık** - **
-* **Emre Işık** - **
+* **Seda Işık** - *Istanbul Technical University, Istanbul, Türkiye*
+* **Emre Işık** - *Max Planck Institute for Solar System Research, 37077 Göttingen, Germany*
 
 ## Change log
 
@@ -153,6 +153,8 @@ Certain equations within DEW are valid to certain values (as are the properties 
 - Updated stored species to include slop16
 - Integrated SUPCRTBL/supcrt96
 - Updated functionality (plots, automatic feeding, search function)
+- Automatic input function updated (2022/10/30). Now you can use it in the form as shown in `tools/Example-dew-calc.ipynb`.
+- Tools added 
 
 ### Planned updates
 
