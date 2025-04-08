@@ -9,12 +9,14 @@ DEWPython is a Python implementation of the Deep Earth Water (DEW) model that al
 
 DEWPython calculates Gibbs energies of formation, equilibrium constants, and standard volume changes for reactions in extreme pressure-temperature conditions, making it particularly valuable for modeling geochemical processes in planetary interiors, hydrothermal systems, and deep-Earth environments.
 
+Because two flavors of SUPCRT are also implemented, DEWPython can calculate thermodynamic properties down to 1 bar and 273 K.
+
 ## Key Features
 
 - Calculate thermodynamic properties across extreme pressure-temperature ranges
 - **Integrated support for SUPCRT96 and SUPCRTBL** directly within the package (executables included)
 - Import and compare species between DEW and SUPCRT models
-- Built-in database of minerals and aqueous species from slop16.dat
+- Built-in database of minerals and aqueous species from slop16.dat (thermodynamic datafile from  Shock et al., including many organic compounds)
 - Interactive and automated input options
 - Plotting utilities for visualizing thermodynamic properties
 
@@ -185,7 +187,7 @@ reaction.export_to_csv()
 
 ## Theoretical Background
 
-The DEW model extends the Helgeson-Kirkham-Flowers (HKF) equations of state to calculate thermodynamic properties at high temperatures (373-1473 K) and pressures (1-6 GPa). DEWPython implements:
+The DEW model extends the Helgeson-Kirkham-Flowers (HKF) equations of state to calculate thermodynamic properties at high temperatures (373-1473 K) and pressures (0.1-6 GPa). DEWPython implements:
 
 1. Water density calculations using Zhang & Duan (2005, 2009)
 2. Dielectric constant calculations using multiple equations (Johnson & Norton, Franck, Fernandez, Sverjensky)
@@ -199,8 +201,8 @@ These calculations enable accurate prediction of reaction properties under extre
 | Model | Pressure Range | Temperature Range | Integration Status |
 |-------|----------------|-------------------|-------------------|
 | DEW   | 0.1-6 GPa | 373-1473 K | Core functionality |
-| SUPCRT96 | 1-5000 bar | 273-873 K | Integrated in package |
-| SUPCRTBL | 1-5000 bar | 273-1273 K | Integrated in package |
+| SUPCRT96 | 0.0001-0.5 GPa | 273-873 K | Integrated in package |
+| SUPCRTBL | 0.0001-0.5 GPa | 273-1273 K | Integrated in package |
 | SeaFreeze | 0.0001-2.3 GPa | 130-500 K | Separate complementary tool |
 
 ## Recent Applications
@@ -237,11 +239,11 @@ In this research, SeaFreeze was used as a complementary tool to determine water 
 
 ## Authors
 
-* **Andrew Chan** - *Div. of Geological and Planetary Sciences, California Institute of Technology, Pasadena, CA, USA 91125* 
-* **Mohit Melwani Daswani** - *Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
-* **Steven Vance** - *Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
+* **Mohit Melwani Daswani** (PI) - *Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
 * **Seda Işık** - *Eurasia Institute of Earth Sciences, Istanbul Technical University, 34469 Istanbul, Türkiye*
 * **Emre Işık** - *Max Planck Institute for Solar System Research, 37077 Göttingen, Germany*
+* **Andrew Chan** (Former Caltech SURF student intern at JPL) - *Div. of Geological and Planetary Sciences, California Institute of Technology, Pasadena, CA, USA 91125* (Graduated and no longer affiliated to Caltech.)
+* **Steven Vance** - *Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109*
 
 ## License
 
@@ -257,13 +259,11 @@ M.M.D. was supported by the NASA Planetary Science Early Career Award Program NN
 
 ## Previous Version History
 
-V 2.0.0
-
-The DEW package allows the user to compute the thermodynamic and elastic properties of various aqueous inputs for a general range of 100 - 1200 C and a pressure range of 1 - 60 kbar. It is based on the [DEW spreadsheet](http://www.dewcommunity.org/) and behaves similarly. The DEW package additionally provides integrated support for [SUPCRTBL](https://models.earth.indiana.edu/supcrtbl.php) and can be used to directly import and compare species between the two models.
-
-V 2.0.1 (this version; not yet on pip)
+V 2.0.1
 
 Automatic input function updated (2022/10/30). Now you can use it in the form as shown in `tools/Example-dew-calc.ipynb`. Beware: this is a beta release. You can use it only by cloning this repository into your local disk, then importing DEWPython according to the location of the cloned repository. 
 
 
+V 2.0.0
 
+The DEW package allows the user to compute the thermodynamic and elastic properties of various aqueous inputs for a general range of 100 - 1200 C and a pressure range of 1 - 60 kbar. It is based on the [DEW spreadsheet](http://www.dewcommunity.org/) and behaves similarly. The DEW package additionally provides integrated support for [SUPCRTBL](https://models.earth.indiana.edu/supcrtbl.php) and can be used to directly import and compare species between the two models.
