@@ -1656,7 +1656,7 @@ class DEW(object):
         else:
             sup_path = '/'.join(('resources', 'supcrt96.x'))
             supPath =  pkg_resources.resource_filename(resource_package, sup_path)
-        self.proc = subprocess.Popen(supPath,shell = True, stdout = subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.STDOUT)
+        self.proc = subprocess.Popen([supPath], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.STDOUT)
         self.pout = self.proc.stdout
         self.pin = self.proc.stdin
         threading.Thread(target=self.outLoop).start()
@@ -1798,7 +1798,7 @@ class DEW(object):
         for reaction in rxn_lst:
             sup_path = '/'.join(('resources', 'supcrt96.x'))
             supPath =  pkg_resources.resource_filename(resource_package, sup_path)
-            self.proc = subprocess.Popen(supPath,stdout=subprocess.PIPE, stdin=subprocess.PIPE,stderr=subprocess.STDOUT, shell=True)
+            self.proc = subprocess.Popen([supPath], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.STDOUT)
             
             self.pout = self.proc.stdout
             self.pin = self.proc.stdin
