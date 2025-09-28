@@ -38,7 +38,7 @@ pip install DEWPython
 
 ### From source
 ```bash
-git clone https://github.com/chandr3w/DEWPython.git
+git clone https://github.com/mmelwani/DEWPython.git
 cd DEWPython
 pip install -e .
 ```
