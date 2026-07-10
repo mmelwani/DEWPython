@@ -5,24 +5,27 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='DEWPython',
-    version='2.0.0',
-    author='chandr3w',
-    author_email='amchan@caltech.edu',
+    version='2.0.2',
+    author='Mohit Melwani Daswani and contributors',
+    author_email='38257523+mmelwani@users.noreply.github.com',
     description='Python-Implemented Deep Earth Water Model',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/chandr3w/DEWPython',
+    url='https://github.com/mmelwani/DEWPython',
     packages=setuptools.find_packages(),
-    download_url = 'https://github.com/chandr3w/DEWPython/archive/2.0.0.tar.gz',
+    download_url='https://github.com/mmelwani/DEWPython/archive/2.0.2.tar.gz',
+    python_requires='>=3.8',
     install_requires=[
         'numpy',
         'pandas',
         'matplotlib',
       ],
-    #package_dir={'': 'DEWPython'},
+    package_data={
+        'DEWPython': ['resources/*'],
+    },
     classifiers=[
-        "Programming Language :: Python :: 3.7",
-        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent"
     ],
     include_package_data=True

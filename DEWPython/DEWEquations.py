@@ -1,3 +1,19 @@
+'''DEWEquations: the DEW model's equations of state, ported line-for-line from the original
+DEW spreadsheet's VBA macros (see http://www.dewcommunity.org/ and the DEW references in
+README.md). The port intentionally mirrors the VBA structure and naming rather than being
+rewritten in idiomatic Python:
+
+- Each function ends by assembling `fn_return_value`, mirroring VBA's convention of assigning
+  a function's return value to a variable named after the function rather than using `return`.
+- `select_variable_N` variables mirror a VBA `Select Case equation` block.
+- Single/double-letter names (B, C, D, E, f, g, T_hat, k0-k4, etc.) are the coefficient names
+  used in the original spreadsheet/papers, not generic placeholders.
+
+This is deliberate: it keeps the code directly comparable, line by line, against the DEW Excel
+workbook for anyone cross-checking a formula there. If you just want to read the physics without
+the VBA idiom, each function's docstring below documents its inputs, outputs, and the equation
+being implemented (with a literature reference where applicable).
+'''
 
 import pandas as pd
 import numpy as np
@@ -13,7 +29,6 @@ from matplotlib.lines import Line2D
 from collections import defaultdict
 import os
 import os.path as op
-import os.path as op
 
 # ### Defining a Global Variables (Location and Constants)
 
@@ -28,7 +43,7 @@ die_path =  '/'.join(('resources', 'dielectric.csv'))
 diePath = op.join(op.dirname(op.abspath(__file__)), die_path.replace('/', op.sep))
 inp_path ='/'.join(('resources', 'input.csv'))
 inpPath = op.join(op.dirname(op.abspath(__file__)), inp_path.replace('/', op.sep))
-den_path ='/'.join(('resources', 'input.csv'))
+den_path ='/'.join(('resources', 'Wat_den.csv'))
 denPath = op.join(op.dirname(op.abspath(__file__)), den_path.replace('/', op.sep))
 g_path = '/'.join(('resources', 'water_gibbs.csv'))
 gPath = op.join(op.dirname(op.abspath(__file__)), g_path.replace('/', op.sep))
