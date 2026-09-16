@@ -101,8 +101,9 @@ global Tr, bigQ, Chi, Pr, E_PrTr, bigR, Psi, Theta, Upsilon, Conversion, mineral
 
 mineralDictionary = json.load(open(mineralPath))
 try:
-    mineralDictionary2 = json.load(open(mineralPath2)) # the extended mineral dictionary is too large to be stored in github
-    '''A dictionary that stores all the minerals and allows them to be queried for use in the DEW model.'''
+    mineralDictionary2 = json.load(open(mineralPath2))
+    '''A dictionary that stores all the minerals and allows them to be queried for use in the DEW model.
+    Used instead of mineralDictionary for non-Psat (custom/regular) pressure-temperature grids.'''
 except FileNotFoundError:
     print('Extended Mineral Dictionary not in use')
 
