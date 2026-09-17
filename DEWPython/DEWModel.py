@@ -99,9 +99,9 @@ def _resolve_supcrt_executable(version='96'):
 
 global Tr, bigQ, Chi, Pr, E_PrTr, bigR, Psi, Theta, Upsilon, Conversion, mineralDictionary
 
-mineralDictionary = json.load(open(mineralPath))
+mineralDictionary = json.load(open(mineralPath, encoding='utf-8'))
 try:
-    mineralDictionary2 = json.load(open(mineralPath2))
+    mineralDictionary2 = json.load(open(mineralPath2, encoding='utf-8'))
     '''A dictionary that stores all the minerals and allows them to be queried for use in the DEW model.
     Used instead of mineralDictionary for non-Psat (custom/regular) pressure-temperature grids.'''
 except FileNotFoundError:
@@ -132,7 +132,7 @@ Conversion = 41.8393
 
 # ## Importing the Aqueous Species Table from the Sheet
 [nameLst, symbolDict, delGf, delHf, entropy, volume, specHeat, a1x10, 
- a2x10_2, a3, a4x10_4, c1, c2x10_4, omegax10_5, Z, comments] = json.load(open(aqPath))
+ a2x10_2, a3, a4x10_4, c1, c2x10_4, omegax10_5, Z, comments] = json.load(open(aqPath, encoding='utf-8'))
 
 
 ############ CODE SAMPLE FOR ADDING ADDITIONAL SPECIES (AQ) ##################################
@@ -186,7 +186,7 @@ Conversion = 41.8393
 # json.dump(g, open("gasLstNew.txt",'w'))
 
 # ## Importing the Gas Table from the Sheet
-[GasLst,GasSymb,GasDelGf,GasDelHf,GasEntropy,GasCp,GasA,GasBx103,GasCx10_5, GasT] = json.load(open(gasPath))
+[GasLst,GasSymb,GasDelGf,GasDelHf,GasEntropy,GasCp,GasA,GasBx103,GasCx10_5, GasT] = json.load(open(gasPath, encoding='utf-8'))
 
 # Search function - can take any length of string
 def search(string):
@@ -721,7 +721,7 @@ class DEW(object):
         This only currently works for an unmodified Deep Earth Water Model Sheet format (6_23_20). 
         This is not dependent on anything else being called first.'''
         
-        diaL = pd.read_csv(diePath, header = None)
+        diaL = pd.read_csv(diePath, header = None, encoding='utf-8')
         dia = diaL.to_numpy()
         dia = dia[4:, 1:]
         diaTrim = dia[1:, 1:]
@@ -731,7 +731,7 @@ class DEW(object):
                 # in form pressure, temperature, value
                 diaCollection.append([dia[0][pressure + 1], dia[row + 1][0], diaTrim[row][pressure]])
 
-        watDen = pd.read_csv(denPath, header = None)
+        watDen = pd.read_csv(denPath, header = None, encoding='utf-8')
         w = watDen.to_numpy()
         w = w[4:, 1:]
         wTrim = w[1:,1:]
@@ -741,7 +741,7 @@ class DEW(object):
                 # in form pressure, temperature, value
                 watDenCollection.append([w[0][pressure + 1], w[row + 1][0], wTrim[row][pressure]])
 
-        gibbsOfWater = pd.read_csv(gPath, header = None)
+        gibbsOfWater = pd.read_csv(gPath, header = None, encoding='utf-8')
         gibbs = gibbsOfWater.to_numpy()
         gibbs = gibbs[3:,:]
         gibbsTrim = gibbs[1:, 1:]
@@ -1716,7 +1716,7 @@ class DEW(object):
         else:
             filename = op.join(resourcesDir, self.supcrtFile)
 
-        with open(filename, 'r') as f:
+        with open(filename, 'r', encoding='utf-8', errors='replace') as f:
             impor = f.read()
             import_data = impor.replace('\t', ' ')
 
@@ -1887,7 +1887,7 @@ class DEW(object):
             raise ValueError("You haven't run SUPCRT yet")
         else:
             file_Path = op.join(resourcesDir, self.supcrtFile)
-        with open(file_Path, 'r') as f:
+        with open(file_Path, 'r', encoding='utf-8', errors='replace') as f:
             impor = f.read()
             import_data = impor.replace('\t', ' ')
 
