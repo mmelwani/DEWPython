@@ -31,7 +31,7 @@ DEWPython has been successfully applied to studying:
 
 ## Installation
 
-### IMPORTANT: The pip version on PyPI is currently outdated (v2.0.0 from 2021). Please install from source to get the latest version with all recent updates, bug fixes, and security patches.
+### IMPORTANT: The pip version on PyPI is currently outdated (v2.0.0 from 2021) and does not include the packaging fixes below. Please install from source to get the latest version with all recent updates and bug fixes.
 
 ### Using pip
 ```bash
@@ -44,6 +44,20 @@ git clone https://github.com/mmelwani/DEWPython.git
 cd DEWPython
 pip install -e .
 ```
+
+### A note on SUPCRT96/SUPCRTBL platform support
+The bundled SUPCRT executables are precompiled binaries, not source, so DEWPython can only run
+them on a matching operating system:
+
+| | SUPCRT96 | SUPCRTBL |
+|---|---|---|
+| Windows | `supcrt96.exe` | `SUPCRTBL.exe` |
+| macOS | `supcrt96.x` | not bundled |
+| Linux | not bundled | not bundled |
+
+`run_supcrt()` detects your OS automatically and raises a clear error if no matching binary is
+bundled for your platform/version combination. The core DEW calculations (`DEW.run()`,
+`DEW.calculate()`, etc.) do not depend on SUPCRT and work on any platform.
 
 ## Quick Start
 
@@ -223,8 +237,13 @@ In this research, SeaFreeze was used as a complementary tool to determine water 
 * Pandas
 * NumPy
 * Matplotlib
-* Collections
-* JSON
+
+`collections` and `json` are also used, but are part of the Python standard library and do not
+need to be installed separately.
+
+The scripts in `tools/` additionally require `scipy` and
+[SeaFreeze](https://github.com/Bjournaux/SeaFreeze), which are not required for the core
+DEWPython package.
 
 ## References
 
@@ -268,6 +287,13 @@ limitations under the License.
 M.M.D. was supported by the NASA Planetary Science Early Career Award Program NNH19ZDA001N-ECA to proposal #19-ECA19-0032. A part of this research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration (80NM0018D0004). Financial support for A.C. was provided by the Jet Propulsion Laboratory, California Institute of Technology Summer Undergraduate Research Fellowship program, and the Caltech Associates. S.I. acknowledges funding by the Scientific and Technological Research Council of Türkiye (TÜBITAK), under grant 122F287. 
 
 ## Previous Version History
+
+V 2.0.2
+
+Fixed the source-install packaging (the package is now a proper `DEWPython/` package with an
+`__init__.py`, so `pip install -e .` / `pip install .` actually install it, matching the README
+examples). Made SUPCRT execution OS-aware with clear errors instead of silently failing, and
+fixed several path- and parsing-related bugs. See the git history for details.
 
 V 2.0.1
 
